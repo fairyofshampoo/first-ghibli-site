@@ -1,0 +1,319 @@
+@font-face {
+    font-family: 'MiracleWorld';
+    src: url(fonts/MiracleWorld.otf);
+}
+
+/* Selector universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FBFADA;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: #12372A;
+    line-height: 1.6;
+}
+
+.mainTitle {
+    font-family: 'MiracleWorld';
+    font-size: 4em;
+    margin: 0;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.introSection {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.39), rgba(20, 0, 0, 0.436)), url("https://media1.popsugar-assets.com/files/thumbor/mlsoFTI9MyfmTebcAQR11kZDEhQ=/fit-in/1584x850/top/filters:format_auto():upscale()/2018/01/23/878/n/1922283/94ec09145a67955c069421.17822184_edit_img_cover_file_44520672_1516732650.jpg");
+    background-size: cover;
+    background-blend-mode: luminosity;
+    padding: 1em 15px;
+}
+
+.introSection, .imagesSection, .moviesSection, .formSection, .reviews, .valuesSection {
+    padding: 1em 15px;
+}
+
+.intro {
+    text-align: justify;
+    padding-right: 5px;
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+.officialSite {
+    text-align: center; /* Centrar el contenido */
+    margin: 1em 0; /* Espacio arriba y abajo */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #12372A;
+    background-color: #C7B7A3;
+    border: 2px solid #658147;
+    border-radius: 25px; /* Redondear más las esquinas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+}
+
+.button:hover {
+    background-color: #EADBC8; /* Cambiar el color de fondo al pasar el mouse */
+    color: #658147; /* Cambiar el color del texto al pasar el mouse */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Aumentar la sombra al pasar el mouse */
+    transform: translateY(-2px); /* Elevar ligeramente el botón al pasar el mouse */
+}
+
+.formSection img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+.valuesSection {
+    background-color: #B5C18E;
+}
+
+h3, h4, h2 {
+    margin-top: 1em;
+    text-align: center;
+    color: #12372A;
+}
+
+ul, ol {
+    padding: 0 20px;
+    list-style-type: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0px auto;
+    justify-content: center;
+}
+
+form label {
+    margin-top: 7px;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    padding: 5px;
+    border: 1px solid #658147;
+    border-radius: 4px;
+}
+
+.radioGroup {
+    display: flex;
+    align-items: center;
+}
+
+.radioGroup input {
+    margin-right: 10px;
+}
+
+form input[type="submit"] {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #12372A; /* Dark Green */
+    color: #FBFADA; /* Very Light Yellow */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #658147; /* Green */
+}
+
+.formSection {
+    display: flex;
+    flex-direction: row; /* Colocar elementos en fila */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C7B7A3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.formSection img {
+    flex: 1; /* Tomar el mismo espacio que el formulario */
+    max-width: 50%; /* Limitar el tamaño de la imagen */
+    border-radius: 8px;
+    margin: 0 10px; /* Agregar espacio entre la imagen y el formulario */
+}
+
+.formSection form {
+    flex: 1; /* Tomar el mismo espacio que la imagen */
+    max-width: 100%; /* Asegurarse de que el formulario no sea más grande que su contenedor */
+    margin: 0 10px; /* Agregar espacio entre la imagen y el formulario */
+}
+
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    background-color: #EADBC8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.movie {
+    perspective: 1000px; /* Añadir perspectiva */
+    width: 250px;
+    margin: 20px;
+}
+
+.movie-inner {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Ajustar altura */
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.movie:hover .movie-inner {
+    transform: rotateY(180deg);
+}
+
+.movie-front, .movie-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid #12372A;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-front {
+    background-color: #EADBC8;
+}
+
+.movie-back {
+    background-color: #B5C18E;
+    transform: rotateY(180deg);
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.movie h3 {
+    font-size: 1.2em; /* Reducir tamaño de fuente */
+    margin: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /* Añadir puntos suspensivos si el texto es muy largo */
+}
+
+.movie p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+/* Valores Section */
+.valuesSection ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.valuesSection li {
+    padding: 10px;
+    background-color: #EADBC8;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+/* Subscribe Section */
+.subscribeSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #FBFADA;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px; /* Espacio adicional para el margen superior */
+}
+
+.subscribeSection form {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    max-width: 50%; /* Limita el tamaño máximo */
+    margin-right: 10px; /* Espacio entre el formulario y la imagen */
+}
+
+.subscribeSection img {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    max-width: 50%; /* Limita el tamaño máximo */
+    max-height: 300px; /* Limita la altura máxima */
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin distorsionar */
+    border-radius: 8px;
+    margin-left: 10px; /* Espacio entre la imagen y el formulario */
+}
+
+.subscribeSection h4 {
+    margin-bottom: 10px; /* Espacio inferior para el título */
+}
+
+.subscribeSection label, .subscribeSection input {
+    display: block;
+    margin: 10px auto;
+}
+
+footer {
+    background-color: #12372A;
+    color: #FBFADA;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px; /* Añadir margen superior */
+    clear: both;
+}
+
+.menu {
+    background-color: #12372A; /* Color de fondo verde oscuro */
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none; /* Asegúrate de que esta línea esté presente */
+}
+
+
+.menu ul li {
+    list-style: none;
+    margin: 0;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    list-style: none;
+    color: #FBFADA; /* Color de texto blanco o claro */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+.menu ul li a:hover {
+    background-color: #658147; /* Color de fondo verde al pasar el mouse */
+    color: #FBFADA; /* Cambio de color de texto al pasar el mouse */
+}

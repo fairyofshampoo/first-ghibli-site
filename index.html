@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Studio Ghibli</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="#intro">Inicio</a></li>
+                <li><a href="#reviews">Reseñas</a></li>
+                <li><a href="#form">Formulario</a></li>
+                <li><a href="#values">Valores</a></li>
+                <li><a href="#subscribe">Suscripción</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="introSection" id="intro">
+        <h1 class="mainTitle">Lo mejor del Studio Ghibli</h1>
+        <p class="intro">
+            Studio Ghibli es un estudio de animación japonés conocido por sus películas de animación de alta calidad
+            y sus historias conmovedoras. Fundado en 1985 por Hayao Miyazaki e Isao Takahata, Studio Ghibli ha
+            producido algunas de las películas de animación más queridas y aclamadas por la crítica de todos los
+            tiempos. Aquí hay algunas reseñas de algunas de las películas más populares de Studio Ghibli.
+        </p>
+        <p class="officialSite">
+            <a href="https://www.ghibli.jp/" target="_blank" class="button">Consulta la página oficial aquí</a>
+        </p>
+    </section>
+
+    <!-- Sección de reseñas -->
+    <section id="reviews">
+        <h2>Reseñas de Películas</h2>
+        <div class="reviews">
+            <div class="movie">
+                <div class="movie-inner">
+                    <div class="movie-front">
+                        <img src="https://m.media-amazon.com/images/I/81UbyXk3DAL._AC_UF894,1000_QL80_.jpg"
+                            alt="Mi Vecino Totoro">
+                        <h3>Mi Vecino Totoro</h3>
+                    </div>
+                    <div class="movie-back">
+                        <p><strong>Director:</strong> Hayao Miyazaki</p>
+                        <p><strong>Año:</strong> 1988</p>
+                        <p><strong>Reseña:</strong> Un poco lenta pero muy bonita, "Mi Vecino Totoro" es una
+                            película que te muestra la magia de la niñez y la belleza de la naturaleza.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="movie">
+                <div class="movie-inner">
+                    <div class="movie-front">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+                            alt="El Viaje de Chihiro">
+                        <h3>El Viaje de Chihiro</h3>
+                    </div>
+                    <div class="movie-back">
+                        <p><strong>Director:</strong> Hayao Miyazaki</p>
+                        <p><strong>Año:</strong> 2001</p>
+                        <p><strong>Reseña:</strong> Una obra maestra del cine de animación, "El Viaje de Chihiro" es
+                            una historia cautivadora y visualmente deslumbrante sobre el crecimiento y la valentía.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="movie">
+                <div class="movie-inner">
+                    <div class="movie-front">
+                        <img src="https://m.media-amazon.com/images/I/51Z-xErNBUL._AC_UF894,1000_QL80_.jpg"
+                            alt="El Castillo Ambulante">
+                        <h3>El Castillo Ambulante</h3>
+                    </div>
+                    <div class="movie-back">
+                        <p><strong>Director:</strong> Hayao Miyazaki</p>
+                        <p><strong>Año:</strong> 2004</p>
+                        <p><strong>Reseña:</strong> "El Castillo Ambulante" es una película fascinante que combina
+                            romance, magia y aventuras en una narrativa visualmente espectacular y emotiva.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario y otras secciones siguen igual -->
+    <section class="formSection" id="form">
+        <img src="images/ponyo.png" alt="Ponyo y Sosuke">
+        <form action="">
+            <h4>¿Cuál es tu película favorita de Studio Ghibli?</h4>
+            <label for="nombre">Película:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br>
+
+            <h4>¿De qué género te gustaría que fuese la siguiente película del estudio?</h4>
+            <div class="radioGroup">
+                <input type="radio" id="aventura" name="genero" value="Aventura" required>
+                <label for="aventura">Aventura</label>
+            </div>
+            <div class="radioGroup">
+                <input type="radio" id="fantasia" name="genero" value="Fantasía">
+                <label for="fantasia">Fantasía</label>
+            </div>
+            <div class="radioGroup">
+                <input type="radio" id="drama" name="genero" value="Drama">
+                <label for="drama">Drama</label>
+            </div>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <!-- Cuáles son los valores del estudio ghibli en lista -->
+    <section class="valuesSection" id="values">
+        <h2>Valores de Studio Ghibli</h2>
+        <ul>
+            <li>Historias conmovedoras</li>
+            <li>Animación de alta calidad</li>
+            <li>Personajes memorables</li>
+            <li>Respeto por la naturaleza</li>
+            <li>Exploración de temas profundos</li>
+        </ul>
+    </section>
+
+    <!-- Sección de suscripción -->
+    <section class="subscribeSection" id="subscribe">
+        <form action="">
+            <h4>Suscríbete a nuestro boletín para recibir las últimas noticias y actualizaciones de Studio Ghibli.</h4>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <input type="submit" value="Suscribirse">
+        </form>
+        <img src="images/jiji.png" alt="Jiji el gato">
+    </section>
+
+    <footer>
+        <p>© 2024 Studio Ghibli. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
